@@ -7,6 +7,10 @@ router.get("/", sayWelcome);
 /* ************************************************************************* */
 // Import And Use Routers Here
 /* ************************************************************************* */
+const categoriesRouter = require("../categories/router");
+
+router.use("/categories", categoriesRouter);
+
 const programActionsRouter = require("./programs/router");
 
 router.use("/programs", programActionsRouter);
